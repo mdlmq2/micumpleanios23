@@ -66,6 +66,9 @@ h1 {
 
 #maps {
     font-size: 0.9rem;
+    font-family: Arial;
+    font-weight: 600;
+    color:#333;
 }
 
 h3 {
