@@ -77,7 +77,7 @@ h3 {
 .name {
     font-family: 'Sansita Swashed', cursive;
     font-size: 3.2rem;
-    color: #f3bef1;
+    color: #ebb1d7;
     margin-top: 1.4rem;
     margin-bottom: 1.5rem;
 }
@@ -99,12 +99,12 @@ h3 {
     font-weight: 600;
     font-size: 0.95rem;
     transition: transform 0.2s, background-color 0.2s;
-    background-color: #f3bef1;
+    background-color: #ebb1d7;
     color: rgb(255, 255, 255);
 }
 
 .buttonscont a#createvent {
-    background-color: #f3bef1;
+    background-color: #ebb1d7;
 }
 
 .buttonscont a:hover {
