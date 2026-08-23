@@ -1,0 +1,134 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-color: #f7f3ed;
+    color: #333;
+}
+
+h1 {
+    font-family: 'Roboto Slab', cursive;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    margin-bottom: 0.5rem;
+}
+
+.number {
+    font-family: 'Chewy', cursive;
+    font-size: clamp(4rem, 12vw, 7rem);
+    color: #ebb1d7;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    margin: 1rem 0;
+    background-color: #ffffff;
+    padding: 0.8rem 1.2rem;
+    border-radius: 12px;
+    box-shadow: 7px 7px #ebb1d7;
+    width: 100%;
+    max-width: 400px;
+}
+
+.datecont, .timecont, .placecont, .ubicont {
+    display: flex;
+    align-items:center;
+    gap: 0.4rem;
+    font-size: 0.9 rem;
+}
+
+.separator {
+    color: #ccc;
+}
+
+.location {
+    font-family: 'Karma', serif;
+    font-size: 1.2rem;
+    margin: 1.2rem 0;
+    max-width: 320px;
+}
+
+#maps {
+    font-size: 0.9rem;
+}
+
+h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+
+.name {
+    font-family: 'Sansita Swashed', cursive;
+    font-size: 3.2rem;
+    color: #f3bef1;
+    margin-top: 1.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.buttonscont {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+    max-width: 350px;
+}
+
+.buttonscont a {
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 25px;
+    border-style:solid;
+    border-color: #f5a5f2;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: transform 0.2s, background-color 0.2s;
+    background-color: #f3bef1;
+    color: rgb(255, 255, 255);
+}
+
+.buttonscont a#createvent {
+    background-color: #f3bef1;
+}
+
+.buttonscont a:hover {
+    transform: translateY(-4px);
+    opacity: 0.9;
+}
+
+@media (min-width: 768px) {
+    body {
+        padding: 3rem;
+    }
+
+    .container {
+        max-width: 500px;
+        padding: 1rem 2rem;
+    }
+
+    .buttonscont {
+        flex-direction: row;
+        justify-content: center;
+        max-width: 500px;
+    }
+
+    .buttonscont a {
+        flex: 1;
+    }
+}
