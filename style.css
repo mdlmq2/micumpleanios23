@@ -13,8 +13,9 @@ body {
     padding: 1.5rem;
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    background-color: #f7f3ed;
-    color: #333;
+    background-color: #17112b;
+    color: white;
+    overflow: hidden;
 }
 
 h1 {
@@ -26,9 +27,10 @@ h1 {
 .number {
     font-family: 'Chewy', cursive;
     font-size: clamp(4rem, 12vw, 7rem);
-    color: #ebb1d7;
+    color: #f8bae2;
     line-height: 1;
     margin-bottom: 1rem;
+    -webkit-text-stroke: 0.5px #fa9bd9;
 }
 
 .container {
@@ -41,9 +43,10 @@ h1 {
     background-color: #ffffff;
     padding: 0.8rem 1.2rem;
     border-radius: 12px;
-    box-shadow: 7px 7px #ebb1d7;
+    box-shadow: 7px 7px #f8bae2;
     width: 100%;
     max-width: 400px;
+    color:#17112b;
 }
 
 .datecont, .timecont, .placecont, .ubicont {
@@ -58,7 +61,7 @@ h1 {
 }
 
 .location {
-    font-family: 'Karma', serif;
+    font-family: 'Poppins', serif;
     font-size: 1.2rem;
     margin: 1.2rem 0;
     max-width: 320px;
@@ -66,9 +69,9 @@ h1 {
 
 #maps {
     font-size: 0.9rem;
-    font-family: Arial;
+    font-family: 'Poppins',serif;
     font-weight: 600;
-    color:#333;
+    color:white;
 }
 
 h3 {
@@ -80,7 +83,8 @@ h3 {
 .name {
     font-family: 'Sansita Swashed', cursive;
     font-size: 3.2rem;
-    color: #ebb1d7;
+    color: #f8bae2;
+    -webkit-text-stroke: 2px #fa9bd9;
     margin-top: 1.4rem;
     margin-bottom: 1.5rem;
 }
@@ -98,12 +102,12 @@ h3 {
     padding: 0.8rem 1.2rem;
     border-radius: 25px;
     border-style:solid;
-    border-color: #f5a5f2;
+    border-color: #fa9bd9;
     font-weight: 600;
     font-size: 0.95rem;
     transition: transform 0.2s, background-color 0.2s;
-    background-color: #ebb1d7;
-    color: rgb(255, 255, 255);
+    background-color: #f8bae2;
+    color: #17112b;
 }
 
 .buttonscont a#createvent {
@@ -133,5 +137,89 @@ h3 {
 
     .buttonscont a {
         flex: 1;
+    }
+}
+
+#brillos {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index:-1;
+}
+
+.brillo {
+    position: absolute;
+
+    width: 8px;
+    height: 8px;
+
+    background: rgb(255, 255, 255);
+
+    transform: rotate(45deg);
+
+    filter: drop-shadow(0 0 6px white);
+}
+
+.brillo::before,
+.brillo::after {
+    content: "";
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 100%;
+    height: 100%;
+
+    background: white;
+
+    transform: translate(-50%, -50%);
+}
+.brillo::before {
+    transform: translate(-50%, -50%) scaleX(0.3);
+}
+
+.brillo::after {
+    transform: translate(-50%, -50%) scaleY(0.3);
+}
+
+.parpadeo {
+    animation: parpadear 2s ease-in-out infinite;
+}
+
+@keyframes parpadear {
+
+    0%, 100% {
+        opacity: 0;
+        transform: rotate(45deg) scale(0.3);
+    }
+
+    50% {
+        opacity: 1;
+        transform: rotate(45deg) scale(1);
+    }
+}
+.lluvia {
+    animation: caer linear infinite;
+}
+
+@keyframes caer {
+
+    0% {
+        transform: translateY(-20px) rotate(45deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(45deg);
+        opacity: 0;
     }
 }
