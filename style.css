@@ -30,7 +30,7 @@ h1 {
     color: #f8bae2;
     line-height: 1;
     margin-bottom: 1rem;
-    -webkit-text-stroke: 0.5px #fa9bd9;
+    -webkit-text-stroke: 1px #fa9bd9;
 }
 
 .container {
@@ -42,8 +42,8 @@ h1 {
     margin: 1rem 0;
     background-color: #ffffff;
     padding: 0.8rem 1.2rem;
-    border-radius: 12px;
-    box-shadow: 7px 7px #f8bae2;
+    border-radius: 1rem;
+    box-shadow: 0.45rem 0.45rem #f8bae2;
     width: 100%;
     max-width: 400px;
     color:#17112b;
@@ -84,9 +84,10 @@ h3 {
     font-family: 'Sansita Swashed', cursive;
     font-size: 3.2rem;
     color: #f8bae2;
-    -webkit-text-stroke: 2px #fa9bd9;
     margin-top: 1.4rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem; 
+    /*-webkit-text-stroke: 2px #fa9bd9;*/
+    text-shadow: 0.1rem 0.1rem 0.2rem #fa9bd9;
 }
 
 .buttonscont {
@@ -100,7 +101,7 @@ h3 {
 .buttonscont a {
     text-decoration: none;
     padding: 0.8rem 1.2rem;
-    border-radius: 25px;
+    border-radius: 2rem;
     border-style:solid;
     border-color: #fa9bd9;
     font-weight: 600;
