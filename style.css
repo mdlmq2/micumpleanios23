@@ -1,62 +1,81 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-    margin-top: -1rem;
     min-height: 100vh;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
+    justify-content: flex-start;
+
+    padding: 2rem 1rem;
+
     font-family: 'Poppins', sans-serif;
     text-align: center;
+
     background-color: #17112b;
     color: white;
+
     overflow-x: hidden;
     overflow-y: auto;
 }
 
 h1 {
-    font-family: 'Roboto Slab', cursive;
-    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    font-family: 'Roboto Slab', serif;
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
     margin-bottom: 0.5rem;
 }
 
 .number {
     font-family: 'Chewy', cursive;
-    font-size: clamp(4rem, 12vw, 7rem);
+    font-size: clamp(4rem, 20vw, 7rem);
     color: #f8bae2;
     line-height: 1;
     margin-bottom: 1rem;
+
     -webkit-text-stroke: 0.1rem #fa9bd9;
 }
 
 .container {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+
     gap: 0.8rem;
+
     margin: 1rem 0;
-    background-color: #ffffff;
     padding: 0.8rem 1.2rem;
+
+    background-color: #ffffff;
     border-radius: 1rem;
     box-shadow: 0.45rem 0.45rem #f8bae2;
+
     width: 100%;
     max-width: 400px;
-    color:#17112b;
+
+    color: #17112b;
 }
 
-.datecont, .timecont, .placecont, .ubicont {
+.datecont,
+.timecont,
+.placecont,
+.ubicont {
     display: flex;
-    align-items:center;
+    align-items: center;
     gap: 0.4rem;
+
     font-size: 0.9rem;
+}
+
+.icono {
+    font-size: 1.2rem;
+    flex-shrink: 0;
 }
 
 .separator {
@@ -64,17 +83,21 @@ h1 {
 }
 
 .location {
-    font-family: 'Poppins', serif;
-    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(0.95rem, 4vw, 1.2rem);
+
     margin: 1.2rem 0;
-    max-width: 320px;
+
+    max-width: 90%;
+
+    overflow-wrap: break-word;
 }
 
 #maps {
     font-size: 0.9rem;
-    font-family: 'Poppins',serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    color:white;
+    color: white;
 }
 
 h3 {
@@ -85,32 +108,42 @@ h3 {
 
 .name {
     font-family: 'Sansita Swashed', cursive;
-    font-size: 3.2rem;
+
+    font-size: clamp(2.5rem, 12vw, 3.2rem);
+
     color: #f8bae2;
+
     margin-top: 1.4rem;
-    margin-bottom: 1.5rem; 
+    margin-bottom: 1.5rem;
+
     text-shadow: 0.1rem 0.1rem 0.2rem #fa9bd9;
 }
 
 .buttonscont {
     align-items: center;
+
     display: flex;
     flex-direction: column;
+
     gap: 0.8rem;
+
     width: 100%;
     max-width: 350px;
 }
 
 button {
     width: 70%;
-    text-decoration: none;
+
     padding: 0.8rem 1.2rem;
+
     border-radius: 2rem;
-    border-style:solid;
-    border-color: #fa9bd9;
+    border: solid #fa9bd9;
+
     font-weight: 600;
     font-size: 0.95rem;
+
     transition: transform 0.2s, background-color 0.2s;
+
     background-color: #f8bae2;
     color: #17112b;
 }
@@ -120,32 +153,13 @@ button {
     opacity: 0.9;
 }
 
-@media (min-width: 768px) {
-    body {
-        padding: 3rem;
-    }
-
-    .container {
-        max-width: 500px;
-        padding: 1rem 2rem;
-    }
-
-    .buttonscont {
-        flex-direction: row;
-        justify-content: center;
-        max-width: 500px;
-    }
-
-    .buttonscont a {
-        flex: 1;
-    }
-}
-
 #brillos {
     position: fixed;
     inset: 0;
+
     pointer-events: none;
-    z-index:-1;
+
+    z-index: -1;
 }
 
 .brillo {
@@ -164,6 +178,7 @@ button {
 .brillo::before,
 .brillo::after {
     content: "";
+
     position: absolute;
 
     top: 50%;
@@ -176,6 +191,7 @@ button {
 
     transform: translate(-50%, -50%);
 }
+
 .brillo::before {
     transform: translate(-50%, -50%) scaleX(0.3);
 }
@@ -189,7 +205,6 @@ button {
 }
 
 @keyframes parpadear {
-
     0%, 100% {
         opacity: 0;
         transform: rotate(45deg) scale(0.3);
@@ -200,12 +215,12 @@ button {
         transform: rotate(45deg) scale(1);
     }
 }
+
 .lluvia {
     animation: caer linear infinite;
 }
 
 @keyframes caer {
-
     0% {
         transform: translateY(-0.6rem) rotate(45deg);
         opacity: 0;
@@ -222,5 +237,29 @@ button {
     100% {
         transform: translateY(110vh) rotate(45deg);
         opacity: 0;
+    }
+}
+
+@media (min-width: 768px) {
+
+    body {
+        padding: 3rem;
+        justify-content: center;
+    }
+
+    .container {
+        max-width: 500px;
+        padding: 1rem 2rem;
+    }
+
+    .buttonscont {
+        flex-direction: row;
+        justify-content: center;
+        max-width: 500px;
+    }
+
+    .buttonscont a,
+    .buttonscont button {
+        flex: 1;
     }
 }
