@@ -6,189 +6,227 @@
 
 body {
     min-height: 100vh;
-
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-
-    padding: 2rem 1rem;
-
+    justify-content: center;
+    padding: 1.5rem 1rem;
     font-family: 'Poppins', sans-serif;
     text-align: center;
-
     background-color: #17112b;
     color: white;
-
     overflow-x: hidden;
     overflow-y: auto;
 }
 
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    z-index: 1;
+}
+
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.35rem;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'liga';
+    flex-shrink: 0;
+}
+
 h1 {
     font-family: 'Roboto Slab', serif;
-    font-size: clamp(1.8rem, 7vw, 2.5rem);
+    font-size: clamp(1.6rem, 5vw, 2.5rem);
     margin-bottom: 0.5rem;
 }
 
 .number {
     font-family: 'Chewy', cursive;
-    font-size: clamp(4rem, 20vw, 7rem);
+    font-size: clamp(4rem, 12vw, 7rem);
     color: #f8bae2;
     line-height: 1;
     margin-bottom: 1rem;
-
     -webkit-text-stroke: 0.1rem #fa9bd9;
 }
 
 .container {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-
-    gap: 0.8rem;
-
+    gap: clamp(0.3rem, 2vw, 0.8rem);
     margin: 1rem 0;
-    padding: 0.8rem 1.2rem;
-
     background-color: #ffffff;
+    padding: 0.8rem 0.8rem;
     border-radius: 1rem;
-    box-shadow: 0.45rem 0.45rem #f8bae2;
-
+    box-shadow: 0.35rem 0.30rem #f8bae2;
     width: 100%;
-    max-width: 400px;
-
+    max-width: 420px;
     color: #17112b;
 }
 
-.datecont,
-.timecont,
-.placecont,
-.ubicont {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-
-    font-size: 0.9rem;
+.container .material-symbols-outlined {
+    font-size: clamp(1.05rem, 3.5vw, 1.25rem);
 }
 
-.icono {
-    font-size: 1.2rem;
+.datecont, .timecont {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: clamp(0.75rem, 2.7vw, 0.9rem);
+    font-weight: 500;
+    white-space: nowrap;
     flex-shrink: 0;
 }
 
 .separator {
     color: #ccc;
+    font-size: clamp(0.75rem, 2.7vw, 0.9rem);
+    flex-shrink: 0;
+}
+
+.placecont, .ubicont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-top: 0.6rem;
 }
 
 .location {
     font-family: 'Poppins', sans-serif;
-    font-size: clamp(0.95rem, 4vw, 1.2rem);
-
-    margin: 1.2rem 0;
-
-    max-width: 90%;
-
-    overflow-wrap: break-word;
+    font-size: 1.1rem;
+    margin: 0;
+    max-width: 320px;
 }
 
 #maps {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    color: white;
+    color: #f8bae2;
+    text-decoration: underline;
+    transition: opacity 0.2s;
+}
+
+#maps:hover {
+    opacity: 0.8;
 }
 
 h3 {
     font-family: 'Roboto Slab', serif;
-    font-size: 1.6rem;
-    margin-top: 1rem;
+    font-size: 1.5rem;
+    margin-top: 1.2rem;
 }
 
 .name {
-    font-family: 'Sansita Swashed', cursive;
-
-    font-size: clamp(2.5rem, 12vw, 3.2rem);
-
+    font-family: 'Sansita Swashed', 'Chewy', cursive;
+    font-size: clamp(2rem, 8vw, 3.2rem);
+    font-weight: 700;
     color: #f8bae2;
-
-    margin-top: 1.4rem;
-    margin-bottom: 1.5rem;
-
+    margin-top: 1rem;
+    margin-bottom: 1.4rem;
+    line-height: 1.25;
     text-shadow: 0.1rem 0.1rem 0.2rem #fa9bd9;
+    white-space: nowrap;
+    max-width: 100%;
 }
 
 .buttonscont {
     align-items: center;
-
     display: flex;
     flex-direction: column;
-
     gap: 0.8rem;
-
     width: 100%;
     max-width: 350px;
 }
 
 button {
-    width: 70%;
-
-    padding: 0.8rem 1.2rem;
-
+    width: 100%;
+    max-width: 280px;
+    padding: 0.85rem 1.4rem;
     border-radius: 2rem;
-    border: solid #fa9bd9;
-
+    border: 2px solid #fa9bd9;
     font-weight: 600;
     font-size: 0.95rem;
-
+    font-family: 'Poppins', sans-serif;
     transition: transform 0.2s, background-color 0.2s;
-
     background-color: #f8bae2;
     color: #17112b;
+    cursor: pointer;
 }
 
-.buttonscont button:hover {
-    transform: translateY(-0.3rem);
-    opacity: 0.9;
+.buttonscont button:hover, button:active {
+    transform: translateY(-0.2rem);
+    background-color: #ffffff;
+}
+
+@media (min-width: 768px) {
+    body {
+        padding: 3rem;
+    }
+
+    .container {
+        max-width: 500px;
+        padding: 1rem 2rem;
+    }
+
+    .buttonscont {
+        flex-direction: row;
+        justify-content: center;
+        max-width: 500px;
+    }
+
+    .buttonscont a {
+        flex: 1;
+    }
 }
 
 #brillos {
     position: fixed;
     inset: 0;
-
     pointer-events: none;
-
-    z-index: -1;
+    z-index: 0;
+    overflow: hidden;
 }
 
 .brillo {
     position: absolute;
-
     width: 0.2rem;
     height: 0.2rem;
-
     background: rgb(255, 255, 255);
-
     transform: rotate(45deg);
-
     filter: drop-shadow(0 0 6px white);
 }
 
 .brillo::before,
 .brillo::after {
     content: "";
-
     position: absolute;
-
     top: 50%;
     left: 50%;
-
     width: 100%;
     height: 100%;
-
     background: white;
-
     transform: translate(-50%, -50%);
 }
 
@@ -205,7 +243,9 @@ button {
 }
 
 @keyframes parpadear {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0;
         transform: rotate(45deg) scale(0.3);
     }
@@ -237,29 +277,5 @@ button {
     100% {
         transform: translateY(110vh) rotate(45deg);
         opacity: 0;
-    }
-}
-
-@media (min-width: 768px) {
-
-    body {
-        padding: 3rem;
-        justify-content: center;
-    }
-
-    .container {
-        max-width: 500px;
-        padding: 1rem 2rem;
-    }
-
-    .buttonscont {
-        flex-direction: row;
-        justify-content: center;
-        max-width: 500px;
-    }
-
-    .buttonscont a,
-    .buttonscont button {
-        flex: 1;
     }
 }
